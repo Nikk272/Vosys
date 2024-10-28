@@ -5,4 +5,28 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/Nikk272/Vosys.git
 git push -u origin main
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System Test</title>
+</head>
+<body>
+    <h1>Company Voting System Test</h1>
+    <form id="votingForm">
+        <label for="votes">Enter Votes (For Testing):</label>
+        <input type="number" id="votes" name="votes" min="0">
+        <button type="button" onclick="submitVote()">Submit Vote</button>
+    </form>
+    <p id="result"></p>
+    <script>
+        function submitVote() {
+            const votes = document.getElementById('votes').value;
+            document.getElementById('result').textContent = `Votes submitted: ${votes}`;
+            // Here, add any logic for counting and displaying results
+        }
+    </script>
+</body>
+</html>
 
